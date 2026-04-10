@@ -1,0 +1,243 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2868
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 /* style.css */\
+\
+/* \uc0\u22522 \u30784 \u37325 \u32622  */\
+* \{\
+    margin: 0;\
+    padding: 0;\
+    box-sizing: border-box;\
+\}\
+\
+:root \{\
+    --bg-color: #050505;\
+    --text-color: #f0f0f0;\
+    --accent-color: #3fe0d0; /* \uc0\u26497 \u20809 \u38738 \u33394  */\
+    --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;\
+\}\
+\
+html \{\
+    scroll-behavior: smooth; /* \uc0\u24179 \u28369 \u28378 \u21160  */\
+    background-color: var(--bg-color);\
+    color: var(--text-color);\
+    font-family: var(--font-main);\
+    font-size: 16px;\
+    line-height: 1.6;\
+\}\
+\
+/* p5.js \uc0\u30011 \u24067 \u35774 \u32622  */\
+#canvas-container canvas \{\
+    position: fixed;\
+    top: 0;\
+    left: 0;\
+    z-index: -1; /* \uc0\u32622 \u20110 \u25152 \u26377 \u20869 \u23481 \u19979 \u26041  */\
+    width: 100% !important;\
+    height: 100% !important;\
+\}\
+\
+/* \uc0\u23548 \u33322 \u26639  */\
+nav \{\
+    position: fixed;\
+    top: 0;\
+    width: 100%;\
+    display: flex;\
+    justify-content: space-between;\
+    align-items: center;\
+    padding: 2rem 4rem;\
+    z-index: 100;\
+\}\
+\
+.logo \{\
+    font-size: 1.5rem;\
+    font-weight: 700;\
+    letter-spacing: -1px;\
+\}\
+\
+.nav-links a \{\
+    text-decoration: none;\
+    color: var(--text-color);\
+    margin-left: 2.5rem;\
+    font-size: 0.9rem;\
+    font-weight: 500;\
+    letter-spacing: 0.1em;\
+    opacity: 0.8;\
+    transition: opacity 0.3s ease;\
+\}\
+\
+.nav-links a:hover \{\
+    opacity: 1;\
+\}\
+\
+/* \uc0\u20027 \u20869 \u23481 \u24067 \u23616  */\
+main \{\
+    position: relative;\
+    z-index: 10; /* \uc0\u20869 \u23481 \u22312 \u26368 \u19978 \u26041  */\
+\}\
+\
+section \{\
+    min-height: 100vh; /* \uc0\u27599 \u20010  Section \u33267 \u23569 \u21344 \u28385 \u19968 \u23631  */\
+    padding: 8rem 4rem 4rem 4rem;\
+\}\
+\
+/* 1. Hero Section (\uc0\u33258 \u25105 \u20171 \u32461 ) */\
+.hero-section \{\
+    display: flex;\
+    justify-content: center;\
+    align-items: center;\
+    text-align: center;\
+\}\
+\
+.hero-content h1 \{\
+    font-size: 6vw; /* \uc0\u21709 \u24212 \u24335 \u22823 \u23383 \u20307  */\
+    font-weight: 700;\
+    letter-spacing: -2px;\
+    margin-bottom: 1rem;\
+    /* \uc0\u20851 \u38190 \u25216 \u24039 \u65306 \u35753 \u25991 \u23383 \u39068 \u33394 \u21453 \u36716  */\
+    mix-blend-mode: difference; \
+\}\
+\
+.hero-content p \{\
+    font-size: 1.5rem;\
+    max-width: 600px;\
+    margin: 0 auto 2.5rem auto;\
+    font-weight: 300;\
+    opacity: 0.9;\
+\}\
+\
+.scroll-down \{\
+    text-decoration: none;\
+    color: var(--accent-color);\
+    font-size: 0.9rem;\
+    letter-spacing: 0.1em;\
+    border-bottom: 1px solid var(--accent-color);\
+    padding-bottom: 5px;\
+\}\
+\
+/* 2. Work Section (Selected Works) */\
+.work-section \{\
+    padding-top: 4rem;\
+\}\
+\
+.section-title \{\
+    font-size: 2.5rem;\
+    font-weight: 700;\
+    letter-spacing: -1px;\
+    margin-bottom: 4rem;\
+\}\
+\
+.work-grid \{\
+    display: grid;\
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* \uc0\u21709 \u24212 \u24335 \u32593 \u26684  */\
+    gap: 3rem;\
+\}\
+\
+.work-item \{\
+    position: relative;\
+    background: rgba(255, 255, 255, 0.03); /* \uc0\u26497 \u20854 \u36731 \u24494 \u30340 \u21345 \u29255 \u32972 \u26223  */\
+    padding: 2rem;\
+    transition: transform 0.3s ease, background 0.3s ease;\
+\}\
+\
+.work-item:hover \{\
+    transform: translateY(-5px);\
+    background: rgba(255, 255, 255, 0.05);\
+\}\
+\
+.work-info h3 \{\
+    font-size: 1.5rem;\
+    margin-bottom: 0.3rem;\
+\}\
+\
+.work-info p \{\
+    font-size: 0.9rem;\
+    opacity: 0.7;\
+    margin-bottom: 1.5rem;\
+\}\
+\
+.work-image-container \{\
+    width: 100%;\
+    aspect-ratio: 16/10; /* \uc0\u32479 \u19968 \u22270 \u29255 \u27604 \u20363  */\
+    overflow: hidden;\
+    margin-bottom: 1rem;\
+\}\
+\
+.work-image-container img \{\
+    width: 100%;\
+    height: 100%;\
+    object-fit: cover; /* \uc0\u22270 \u29255 \u22635 \u20805 \u23481 \u22120  */\
+\}\
+\
+.view-project \{\
+    text-decoration: none;\
+    color: var(--text-color);\
+    font-size: 0.8rem;\
+    opacity: 0.6;\
+\}\
+\
+/* 3. Quick About Section */\
+.quick-about-section \{\
+    display: flex;\
+    justify-content: center;\
+    align-items: center;\
+    background-color: rgba(0,0,0,0.5); /* \uc0\u31245 \u24494 \u21152 \u28145 \u32972 \u26223 \u65292 \u21306 \u20998 \u21306 \u22495  */\
+\}\
+\
+.about-container \{\
+    display: flex;\
+    align-items: center;\
+    max-width: 1000px;\
+    gap: 4rem;\
+\}\
+\
+.avatar \{\
+    width: 250px;\
+    height: 250px;\
+    border-radius: 50%;\
+    object-fit: cover;\
+\}\
+\
+.about-text h2 \{\
+    font-size: 2rem;\
+    margin-bottom: 1rem;\
+\}\
+\
+.about-text p \{\
+    font-size: 1.1rem;\
+    font-weight: 300;\
+    opacity: 0.8;\
+    margin-bottom: 1.5rem;\
+\}\
+\
+.contact-link \{\
+    text-decoration: none;\
+    color: var(--accent-color);\
+\}\
+\
+/* \uc0\u31616 \u21333 \u21160 \u30011  */\
+.fade-in \{\
+    animation: fadeIn 1s ease forwards;\
+    opacity: 0;\
+\}\
+\
+.delay-1 \{ animation-delay: 0.3s; \}\
+.delay-2 \{ animation-delay: 0.6s; \}\
+\
+@keyframes fadeIn \{\
+    to \{ opacity: 1; \}\
+\}\
+\
+/* \uc0\u21709 \u24212 \u24335 \u36866 \u37197  (\u25163 \u26426 \u31471 ) */\
+@media (max-width: 768px) \{\
+    nav \{ padding: 1.5rem 2rem; \}\
+    .nav-links a \{ margin-left: 1rem; font-size: 0.8rem; \}\
+    section \{ padding: 6rem 2rem 2rem 2rem; \}\
+    .hero-content h1 \{ font-size: 10vw; \}\
+    .work-grid \{ grid-template-columns: 1fr; \}\
+    .about-container \{ flex-direction: column; text-align: center; gap: 2rem; \}\
+    .avatar \{ width: 150px; height: 150px; \}\
+\}}
